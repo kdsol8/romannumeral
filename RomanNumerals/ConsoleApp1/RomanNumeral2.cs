@@ -67,12 +67,12 @@ namespace RomanNumerals
             int currentLetter = 0;
             while (value > 0)
             {
-                int modResult = value / getRomanValue(letters[currentLetter]);
-                for (int i = 0; i < modResult; i++)
+                int result = value / getRomanValue(letters[currentLetter]);
+                for (int i = 0; i < result; i++)
                 {
                     roman += letters[currentLetter];
                 }
-                value -= getRomanValue(letters[currentLetter]) * modResult;
+                value -= getRomanValue(letters[currentLetter]) * result;
                 currentLetter++;
             }
             return roman;
